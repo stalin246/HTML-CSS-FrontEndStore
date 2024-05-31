@@ -230,53 +230,57 @@ h3 {
 }
 
 
-/* Pagina del Producto */
+/* Página del Producto */
+.camisa {
+    margin: 1rem; /* Añade un margen de 1 rem alrededor de los elementos de la clase .camisa para separación del resto de la página */
+}
+
+.formulario {
+    display: grid; /* Establece un sistema de cuadrícula para el formulario */
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas de igual ancho dentro del formulario */
+    gap: 2rem; /* Añade un espacio de 2 rem entre las columnas y filas del grid */
+}
+
+.formulario__campo {
+    border: 1rem solid var(--primarioOscuro); /* Aplica un borde sólido con un ancho de 1 rem y color oscuro primario */
+    background-color: transparent; /* Establece un color de fondo transparente para los campos del formulario */
+    color: var(--blanco); /* Define el color del texto dentro de los campos a blanco */
+    font-size: 2rem; /* Ajusta el tamaño de fuente a 2 rem para mejorar la legibilidad */
+    font-family: Arial, Helvetica, sans-serif; /* Establece la familia de fuente para los campos */
+    padding: 1rem; /* Añade relleno interno de 1 rem para espaciar el texto del borde */
+    appearance: none; /* Elimina el estilo por defecto de los campos para permitir personalización completa */
+    width: 100%; /* Asegura que los campos ocupen el ancho completo de su contenedor de cuadrícula */
+}
+
+.camisa__contenido--justificar {
+    text-align: justify; /* Justifica el texto del contenido de .camisa para una distribución uniforme en líneas completas */
+}
+
+.formulario__campo--talla {
+    width: 100%; /* Asegura que el selector de talla ocupe el ancho completo disponible */
+}
+
+.formulario__submit {
+    background-color: var(--secunadrio); /* Establece el color de fondo del botón de envío usando el color secundario */
+    border: none; /* Elimina cualquier borde del botón */
+    font-size: 2rem; /* Define un tamaño de fuente grande para el texto del botón */
+    font-family: var(--fuenteprincipal); /* Utiliza una fuente principal personalizada para el texto del botón */
+    padding: 2rem; /* Añade un relleno sustancial para mejorar la estética y la facilidad de clic */
+    transition: background-color .3s ease; /* Añade una transición suave para el cambio de color de fondo */
+    grid-column: 1/3; /* Extiende el botón a lo largo de las dos columnas del grid */
+}
+
+.formulario__submit:hover {
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa el ratón sobre el botón para indicar que es clickeable */
+    background-color: var(--secundarioOscuro); /* Cambia el color de fondo al oscurecerse cuando se pasa el ratón sobre él */
+}
 
 @media (min-width: 768px) {
     .camisa {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-        margin-bottom: 19rem;
-        text-align: justify;
-
+        display: grid; /* Activa el layout de cuadrícula para .camisa en pantallas más grandes */
+        grid-template-columns: repeat(2, 1fr); /* Establece dos columnas de igual tamaño */
+        column-gap: 2rem; /* Define un espacio entre columnas */
+        margin-bottom: 25rem; /* Añade un gran margen inferior para separación visual o estilística */
+        text-align: justify; /* Justifica el texto para mejorar la alineación y la presentación */
     }
-    
 }
-
-
-
-.formulario {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    
-}
-.formulario__campo {
-    /* border-color: var(--primarioOscuro);
-    border-width: 1rem;
-    border-style: solid; */
-    border: 1rem solid var(--primarioOscuro);
-    background-color: transparent;
-    color: var(--blanco);
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem;
-    appearance: none;
-
-}
-.formulario__submit {
-    background-color: var(--secunadrio);
-    border: none;
-    font-size: 2rem;
-    font-family: var(--fuenteprincipal);
-    padding: 2rem;
-    transition: background-color .3s ease;
-    grid-column: 1/3;
-
-}
-.formulario__submit:hover {
-    cursor: pointer;
-    background-color: var(--secundarioOscuro);
-}
-
