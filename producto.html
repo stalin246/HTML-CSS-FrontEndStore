@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title> <!-- Define el título de la página, que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="css/normalize.css"> <!-- Vincula una hoja de estilos para normalizar los estilos predeterminados del navegador -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Vincula la hoja de estilos principal del sitio web -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Optimiza la conexión con Google Fonts para cargar las fuentes más rápidamente -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Permite una conexión más rápida y segura con Google Fonts aprovechando CORS -->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> <!-- Importa la fuente 'Staatliches' de Google Fonts, diseñada para usarse en todo el sitio -->
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>React JS</h1>
+        <div class="camisa">
+            
+            <img class="camisa__imagen" src="img/3.jpg" alt="Imagen Del Producto">
+            <div class="camisa__contenido">
+                <p>Descubre la camiseta esencial para cualquier desarrollador de React JS. Confeccionada con materiales de alta calidad, esta camiseta no solo te brinda comodidad durante largas horas de programación, sino que también te conecta con la vibrante comunidad de React. Su diseño moderno y minimalista representa perfectamente la eficiencia y elegancia de React JS, haciéndola perfecta tanto para el trabajo como para eventos de networking. Únete a la comunidad con estilo y muestra tu pasión por la innovación y la tecnología con cada uso.</p>
+                <form class="formulario" action="">
+                    <!-- Formulario para seleccionar opciones del producto y agregarlo al carrito de compras. El atributo 'action' está vacío, indicando que el formulario no tiene un destino definido aún. -->
+    
+                    <select class="formulario__campo" name="" id="">
+                        <!-- Menú desplegable para seleccionar la talla del producto. -->
+                        <option disabled selected value="">Seleccionar Talla</option>
+                        <!-- Opción deshabilitada que actúa como placeholder en el menú. -->
+                        <option value="">Chica</option>
+                        <!-- Opción para seleccionar talla chica. -->
+                        <option value="">Mediana</option>
+                        <!-- Opción para seleccionar talla mediana. -->
+                        <option value="">Grande</option>
+                        <!-- Opción para seleccionar talla grande. -->
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    <!-- Campo para ingresar la cantidad del producto a comprar, con un mínimo establecido en 1. -->
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito">
+                    <!-- Botón para enviar el formulario, agregando el producto al carrito de compras. -->
+            </div>
+
+        </div>
+
+    </main>
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los derechos reservados 2024.</p>
+    </footer>
+    
+</body>
+</html>
+

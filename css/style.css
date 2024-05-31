@@ -1,0 +1,282 @@
+/* Valores Globales */
+
+:root {
+    --primario: #84b3c2; /* Define un color primario */
+    --primarioOscuro: #6694a4; /* Define un tono más oscuro del color primario */
+    --secunadrio: #FCCE00; /* Define un color secundario amarillo (posible error tipográfico en el nombre de la variable) */
+    --secundarioOscuro: rgb(233, 287, 2); /* Define un tono más oscuro del color secundario en formato RGB */
+    --blanco: #ffff; /* Define un color blanco para usar en el texto y otros elementos */
+    --fuenteprincipal: "Staatliches", sans-serif; /* Define una fuente principal para los títulos y elementos destacados */
+}
+
+header {
+    margin-top: 20rem, 0;
+}
+/* Selectores Globales */
+html {
+    box-sizing: border-box; /* Cambia el modelo de caja a border-box donde el padding y el border son incluidos en el ancho y alto total del elemento */
+    font-size: 62.55%; /* Establece el tamaño de fuente base para que 1rem sea igual a 10px (62.55% de 16px) */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* Hace que todos los elementos hereden el box-sizing del elemento raíz */
+}
+
+/* Cuerpo de la página */
+body {
+   
+    background-color: var(--primario); /* Establece el color de fondo del cuerpo usando la variable de color primario */
+    font-size: 1.6rem; /* Define el tamaño de fuente estándar del texto del cuerpo */
+    line-height: 1.5; /* Define la altura de línea para mejorar la legibilidad del texto */
+    position: relative;
+}
+
+/* Párrafos */
+p {
+    font-size: 1.8rem; /* Establece un tamaño de fuente específico para los párrafos */
+    font-family: Arial, Helvetica, sans-serif; /* Establece la familia de fuentes para los párrafos */
+    color: var(--blanco); /* Establece el color de texto de los párrafos usando la variable de color blanco */
+}
+  
+/* Enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces para un diseño más limpio */
+}
+
+/* Imágenes */
+img {
+    width: 100%; /* Hace que las imágenes se escalen para ocupar el ancho completo de su contenedor */
+}
+
+/* Contenedor general */
+.contenedor {
+    max-width: 120rem; /* Establece un ancho máximo para el contenedor, manteniendo el contenido centralizado en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor en la página al ajustar automáticamente los márgenes izquierdo y derecho */
+}
+
+/* Títulos */
+h1, h2, h3 {
+    text-align: center; /* Centra el texto de los títulos */
+    color: var(--secunadrio); /* Establece el color de los títulos usando la variable de color secundario */
+    font-family: var(--fuenteprincipal); /* Utiliza la fuente principal definida para los títulos */
+}
+
+h1 {
+    font-size: 4rem; /* Tamaño de fuente específico para h1, el más grande entre los títulos */
+}
+h2 {
+    font-size: 3.2rem; /* Tamaño de fuente para h2 */
+}
+
+h3 {
+    font-size: 2.4rem; /* Tamaño de fuente para h3, el más pequeño entre los títulos */
+}
+
+/* Header */
+.header {
+    display: flex; /* Establece un contenedor flexible que permite a los elementos hijos alinearse en una fila o columna. */
+    justify-content: center; /* Centra los elementos hijos horizontalmente dentro del contenedor .header. */
+}
+
+.header__logo {
+    margin: 3rem 0; /* Aplica un margen superior e inferior de 3 rem al logotipo, centrando verticalmente si está solo. */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+
+}
+.footer__texto {
+    font-family: var(--fuenteprincipal);
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+/* Navegacion */
+.navegacion {
+    background-color: var(--primarioOscuro); /* Establece el color de fondo de la barra de navegación usando la variable CSS para el color primario oscuro. */
+    padding: 1rem 0; /* Aplica relleno superior e inferior de 1 rem para dar espacio vertical dentro de la barra de navegación. */
+    display: flex; /* Utiliza flexbox para la barra de navegación, permitiendo un diseño flexible de los enlaces. */
+    justify-content: center; /* Centra los enlaces de navegación horizontalmente dentro de la barra de navegación. */
+    gap: 2rem; /* Establece un espacio de 2 rem entre cada enlace de navegación. */
+    /* margin-right: 2rem; */
+}
+
+.navegacion__enlace {
+    font-family: var(--fuenteprincipal); /* Utiliza la fuente principal definida en las variables CSS para los enlaces. */
+    color: var(--blanco); /* Establece el color del texto de los enlaces a blanco, definido en las variables CSS. */
+    font-size: 3rem; /* Establece el tamaño de fuente de los enlaces a 3 rem, haciéndolos más grandes y legibles. */
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--secunadrio); /* Cambia el color de texto de los enlaces activos o en hover a un color secundario definido en las variables CSS. */
+}
+
+/** Grid **/
+.grid {
+    display: grid; /* Establece un contenedor de cuadrícula para organizar elementos internos en un layout de rejilla */
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas de igual ancho dentro del contenedor */
+    gap: 2rem; /* Define un espacio de 2 rem entre las filas y columnas dentro del contenedor */
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Aumenta a tres columnas de igual ancho para pantallas de al menos 768px de ancho */
+    }
+}
+
+/* Productos */
+.producto {
+    background-color: var(--primarioOscuro); /* Aplica un color de fondo oscuro a cada elemento producto, usando una variable CSS */
+    padding: 1rem; /* Añade relleno alrededor del contenido interno de cada producto para espacio visual */
+}
+
+
+
+.producto__nombre {
+    font-size: 4rem; /* Establece el tamaño de la fuente del nombre del producto, haciéndolo prominente */
+}
+
+.producto__precio {
+    font-size: 2.8rem; /* Define el tamaño de la fuente para el precio del producto */
+    color: var(--secunadrio); /* Aplica un color a los precios de los productos, usando otra variable CSS para diferenciarlo */
+}
+
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuenteprincipal); /* Utiliza una fuente principal, definida por una variable CSS, para los nombres y precios */
+    margin: 1rem 0; /* Añade un margen vertical arriba y abajo para separar estos elementos de otros */
+    text-align: center; /* Centra el texto del nombre y precio del producto */
+    line-height: 1.2; /* Define la altura de línea para mejorar la legibilidad del nombre y precio */
+}
+
+/* Gráficos */
+.grafico {
+    min-height: 30rem; /* Establece una altura mínima para los elementos gráficos, asegurando que tienen suficiente espacio vertical */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita, mostrando solo una instancia de la imagen */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir completamente el área del elemento, recortándola según sea necesario */
+    grid-column: 1/3; /* Extiende el elemento a lo largo de dos columnas del grid (desde la primera hasta antes de la tercera) */
+}
+
+.grafico--camisas {
+    grid-row: 2/3; /* Posiciona el gráfico específicamente en la segunda fila del grid */
+    /* grid-column: 1/3; Comentado, muestra una intención inicial de extender este elemento a través de dos columnas */
+    background-image: url(../img/grafico1.jpg); /* Establece una imagen de fondo específica para el gráfico de camisas */
+}
+
+.grafico--node {
+    background-image: url(../img/grafico2.jpg); /* Aplica una imagen de fondo diferente para el gráfico relacionado con Node.js */
+    /* grid-column: 1/3; Comentado, muestra que inicialmente se consideró una extensión similar a .grafico--camisas */
+    grid-row: 8/9; /* Posiciona este gráfico en la octava fila del diseño del grid */
+}
+
+@media (min-width: 768px) {
+    .grafico--node {
+        grid-row: 5/6; /* Ajusta la fila del gráfico de Node.js en vistas de pantalla más anchas (al menos 768px) */
+        grid-column: 2/4; /* Extiende el gráfico de Node.js a través de dos columnas, desde la segunda hasta antes de la cuarta, en pantallas más grandes */
+    }
+}
+
+/* Nosotros */
+.nosotros {
+    display: grid; /* Establece un sistema de cuadrícula para el contenedor .nosotros */
+    grid-template-rows: repeat(2, auto); /* Define dos filas que ajustan su altura automáticamente según el contenido */
+    text-align: justify;
+    margin: 0 1rem;
+  
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        display: grid; /* Reafirma que el display como grid se mantiene en resoluciones mayores */
+        grid-template-columns: repeat(2, 1fr); /* En pantallas más grandes, organiza el contenido en dos columnas de igual tamaño */
+        column-gap: 2rem; /* Establece un espacio de 2 rem entre las columnas para separación */
+        text-align: justify; /* Justifica el texto dentro del contenedor, distribuyendo uniformemente el espacio entre las palabras */
+    }
+}
+
+.nosotros__imagen {
+    grid-row: 1/2; /* Ubica la imagen en la primera fila del grid */
+    
+}
+
+@media (min-width: 768px) {
+    .nosotros__imagen {
+        grid-column: 2/3; /* En pantallas más grandes, mueve la imagen a la segunda columna del grid */
+    }
+}
+/* Bloques */
+.bloques {
+    display: grid; /* Establece el modelo de caja como cuadrícula para el contenedor .bloques */
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas de igual ancho dentro del contenedor */
+    gap: 3rem; /* Establece un espacio de 3 rem entre las filas y columnas dentro del contenedor */
+}
+
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr); /* En pantallas de al menos 768px de ancho, aumenta el número de columnas a cuatro */
+    }
+}
+
+
+
+.bloque {
+    text-align: center; /* Centra el texto dentro de los elementos .bloque */
+    margin: 0; /* Elimina los márgenes por defecto del elemento .bloque, asegurando que no haya espacio adicional alrededor de los bordes */
+}
+
+
+/* Pagina del Producto */
+
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        margin-bottom: 19rem;
+        text-align: justify;
+
+    }
+    
+}
+
+
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    
+}
+.formulario__campo {
+    /* border-color: var(--primarioOscuro);
+    border-width: 1rem;
+    border-style: solid; */
+    border: 1rem solid var(--primarioOscuro);
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+
+}
+.formulario__submit {
+    background-color: var(--secunadrio);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuenteprincipal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1/3;
+
+}
+.formulario__submit:hover {
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
+
